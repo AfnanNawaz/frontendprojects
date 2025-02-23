@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Page 2: Birthday Greeting -->
+    <div id="page-2" class="page">
+        <div class="container">
+            <h1>🎉 Happy Birthday, <span id="name"></span>! 🎉</h1>
+            <p class="message">Wishing you a day filled with love, joy, and unforgettable moments, <span id="name-2"></span>!</p>
+            <div class="balloons">
+                <div class="balloon balloon-1"></div>
+                <div class="balloon balloon-2"></div>
+                <div class="balloon balloon-3"></div>
+                <div class="balloon balloon-4"></div>
+            </div>
+            <a href="page3.html"><button>Thanks!</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Get the name from the URL and display it
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        
+        if (name) {
+            document.getElementById('name').innerText = name;
+            document.getElementById('name-2').innerText = name;
+        }
+    </script>
+
+</body>
+</html>
